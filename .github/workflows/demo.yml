@@ -62,6 +62,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - run: echo "Hello windows"
+      - run: echo "${{ secrets.TOP_SECRET_KEY }}"
   package:
     needs: [build-app,build-db]   
     runs-on: windows-latest
