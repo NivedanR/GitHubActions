@@ -52,7 +52,7 @@ jobs:
       - name: set the values
         id: step_two
         run: |
-          echo " env.action_state "   
+          echo " ${{ env.action_state }} "   
   build-api:
     runs-on: windows-latest
     steps:
