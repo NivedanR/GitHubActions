@@ -38,16 +38,21 @@ jobs:
           echo "$Greeting $First_Name .Today is $DAY_OF_WEEK"
           echo "testvar $testvar"
           echo "testvar ${{ env.testvar }}"
+          
         env:
           testvar: value-3
           First_Name: Student  
 
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: set the values
+        id: step_one
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          echo "action_state=yellow" >> $GITHUB_ENV
+      - name: set the values
+        id: step_two
+        run: |
+          echo " env.action_state "   
   build-api:
     runs-on: windows-latest
     steps:
