@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       Greeting: Dear
-      testvar: value-1
+      testvar: value-2
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
